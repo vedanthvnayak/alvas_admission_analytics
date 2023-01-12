@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+  border-right:1px solid #bbb;
+}
+
+li:last-child {
+  border-right: none;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+ 
+  background-color: #04AA6D;
+}
+.imgs{
+  background: rgba(72, 71, 71, 0.824);
+  border-radius: 8px;
+  width: 90px;
+  position: relative;
+
+}
+.scroll-left {
+     height: 60px;	
+     overflow: hidden;
+     position: relative;
+     background: rgba(135, 135, 133, 0.317);
+     color: rgba(245, 245, 244, 0.722);
+     border: 1px solid rgba(255, 17, 0, 0.396);
+    }
+    .scroll-left p {
+     position: absolute;
+     width: 100%;
+     height: 100%;
+     margin: 0;
+     line-height: 50px;
+     text-align: center;
+     /* Starting position */
+     transform:translateX(100%);
+     /* Apply animation to this element */
+     animation: scroll-left 15s linear infinite;
+    }
+    /* Move it (define the animation) */
+    @keyframes scroll-left {
+     0%   {
+     transform: translateX(100%); 		
+     }
+     100% {
+     transform: translateX(-100%); 
+     }
+    }
+</style>
+</head>
+<body>
+
+<ul>
+  <li><a class="active" href="landing.php">Home</a></li>
+  <li><a href="#contact">Contact</a></li>
+  <li style="float:right"><a href="#about">About</a></li>
+  <li style="float:right"><a href="#about">Admin login</a></li>
+</ul>
+<br>
+<div class="scroll-left">
+  <h1><p>ALVA'S ADMISSION ANALYTICS</p></h1></div>
+  </div><br>
+<center><img class="imgs" src="./source/logo.png" alt=""></center>
+</body>
+</html>
+
+
