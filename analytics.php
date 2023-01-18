@@ -7,16 +7,18 @@
 </head>
 <style>
     body{
-    background-color: deepskyblue;
+        background-image: url('./source/mapbg.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .mapdiv{
-    width:28%;
+    width:auto;
     margin: auto;
 }
 
 .mapdiv path {
-    fill: #cc1100;
+    fill: red;
     stroke: #dece0c;
     stroke-width:4px;
     transition: fill 0.3s;
