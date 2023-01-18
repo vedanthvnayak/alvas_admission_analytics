@@ -1,66 +1,108 @@
-<html>  
-<head>  
-    <title>admin login</title> 
-    <link rel = "stylesheet" type = "text/css" href = "style.css">   
-</head>  
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-    body{   
-    background: #eee;  
-}  
-#frm{  
-    border: solid gray 1px;  
-    width:25%;  
-    border-radius: 2px;  
-    margin: 120px auto;  
-    background: white;  
-    padding: 50px;  
-}  
-#btn{  
-    color: #fff;  
-    background: #337ab7;  
-    padding: 7px;  
-    margin-left: 70%;  
-}  
+body {font-family: Arial, Helvetica, sans-serif;
+  background-image: url('./source/alvas-college-moodbidri.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+form {border: 2px solid #f1f1f1;
+  width: 800px;
+  height: 350px;
+  margin: auto;
+  background: #D9CFCF;}
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+}
+
+
+
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
 </style>
-<body>  
+</head>
 <?php include("navbar.html");?>
-    <div id = "frm">  
-        <h1>Login</h1>  
-        <form name="f1" action = "admin_auth.php" onsubmit = "return validation()" method = "POST">  
-            <p>  
-                <label> UserName: </label>  
-                <input type = "text" id ="user" name  = "user" />  
-            </p>  
-            <p>  
-                <label> Password: </label>  
-                <input type = "password" id ="pass" name  = "pass" />  
-            </p>  
-            <p>     
-                <input type =  "submit" id = "btn" value = "Login" />  
-            </p>  
-        </form>  
-    </div>    
-    <script>  
-            function validation()  
-            {  
-                var id=document.f1.user.value;  
-                var ps=document.f1.pass.value;  
-                if(id.length=="" && ps.length=="") {  
-                    alert("User Name and Password fields are empty");  
-                    return false;  
-                }  
-                else  
-                {  
-                    if(id.length=="") {  
-                        alert("User Name is empty");  
-                        return false;  
-                    }   
-                    if (ps.length=="") {  
-                    alert("Password field is empty");  
-                    return false;  
-                    }  
-                }                             
-            }  
-        </script>  
-</body>     
-</html>  
+<body >
+
+
+
+<form action="admin_auth.php" method="post">
+  <div class="imgcontainer">
+    
+  </div>
+
+  <div class="container">
+    <label for="uname"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="uname" required>
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+        <br><br><br><br>
+    <button type="submit">Login</button>
+    <?php
+    if(isset($_GET['error'])==true){
+      echo '<font color="#FF0000"><p align="center">Wrong User name or password</p></font>';
+    }
+   
+    ?>
+    
+  </div>
+
+  
+    
+  </div>
+</form>
+
+</body>
+</html>
