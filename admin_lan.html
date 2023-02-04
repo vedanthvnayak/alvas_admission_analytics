@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="sidebar.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>admin</title>
+</head>
+<ul>
+    <li><a class="active" href="landing.php">Home</a></li>
+    <li><a href="contact.php">Contact</a></li>
+  </ul>
+  <center><img class="imgs" src="./source/logo.png" alt=""></center>
+  <br>
+  <div class="scroll-left">
+    <h1><p>ALVA'S ADMISSION ANALYTICS</p></h1></div>
+    </div><br>
+  
+  
+<body>
+    <style>
+       body {
+    background-image: url('./source/16_mn Alvas (1).jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+        </style>
+    <div class="wrapper">
+        <!--Top menu -->
+        <div class="section">
+            <div class="top_navbar">
+                <div class="hamburger">
+                    <a href="#">
+                        <i class="fas fa-bars"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="sidebar">
+           <!--profile image & text-->
+           <div class="profile">
+            <img src="./source/adminlogo.png" alt="profile_picture">
+            <h3>Admin</h3>
+            <p>adminlogin</p>
+        </div>
+            <!--menu item-->
+            <ul>
+                <li>
+                    <a href="landing.php" class="active">
+                        <span class="icon"><i class="fas fa-home"></i></span>
+                        <span class="item">Home</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="analytics.php">
+                        <span class="icon"><i class="fas fa-desktop"></i></span>
+                        <span class="item">Map analyitics</span>
+
+                    
+                    </a>
+                     <a href="past_promo.php">
+                        <span class="icon"><i class="fas fa-user-shield"></i></span>
+                        <span class="item">Past Promotions</span>
+                    </a>
+                    <a href="admision_dash.php">
+                        <span class="icon"><i class="fas fa-user-shield"></i></span>
+                        <span class="item">Admision Section</span>
+                    </a>
+                    <a href="adminlogin.php">
+                        <span class="icon"><i class="fas fa-user-shield"></i></span>
+                        <span class="item">Logout</span>
+                </li>
+                <div id="chartContainer">
+                    <div class="bar" data-value="20"></div>
+                    <div class="bar" data-value="40"></div>
+                    <div class="bar" data-value="60"></div>
+                    <div class="bar" data-value="80"></div>
+                    <div class="bar" data-value="100"></div>
+                  </div>
+        </div>
+        </div>
+    </div>  
+    <style>
+       
+.imgs{
+  background: rgba(249, 248, 248, 0.768);
+  border-radius: 4px;
+  width: 80px;
+  position: relative;
+
+}
+.scroll-left {
+     height: 60px;	
+     overflow: hidden;
+     position: relative;
+     color: rgb(244, 240, 240);
+    }
+    .scroll-left p {
+     position: absolute;
+     width: 100%;
+     height: 100%;
+     margin: 0;
+     line-height: 50px;
+     text-align: center;
+     /* Starting position */
+     transform:translateX(100%);
+     /* Apply animation to this element */
+     animation: scroll-left 15s linear infinite;
+    }
+    /* Move it (define the animation) */
+    @keyframes scroll-left {
+     0%   {
+     transform: translateX(100%); 		
+     }
+     100% {
+     transform: translateX(-100%); 
+     }
+    }
+    </style>
+    <!--active menu button for javascript-->
+  <script>
+var hamburger = document.querySelector(".hamburger");
+    hamburger.addEventListener("click", function(){
+        document.querySelector("body").classList.toggle("active");
+    })
+  </script>
+</body>
+</html>

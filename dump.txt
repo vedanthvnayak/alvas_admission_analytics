@@ -1,0 +1,57 @@
+    
+                     <!--  <div class="col-lg-4 col-md-4 col-4">
+                        <label for="dist" >Select District</label>
+                        <select name="dist" id="dist" class="form-control">
+                          <option selected disabled>Select District</option>
+                          <?php foreach($co1 as $s){ ?>
+                          <option value="<?php echo $s['dist'] ?>"><?php echo $s['dist'] ?></option>
+                        <?php  } ?>
+                        </select>
+                      </div>-->
+
+
+
+
+                        
+                      
+                  
+                      
+                      
+
+                      
+                  
+
+                      
+                      
+                      
+
+                      
+                      
+
+
+                      
+
+                      
+                      
+                      
+
+
+                     
+
+                      
+
+                      
+
+
+                       
+
+                      
+
+
+                      
+
+
+
+
+
+                      
